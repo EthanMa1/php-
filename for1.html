@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PHP中文网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <style>
+        body{
+            width:1200px;
+            height:400px;
+            margin:0 auto;
+            border-radius:8px;
+            box-shadow:8px 8px 18px #eff121;
+
+        }
+    </style>
+    <script>
+        function foo(){
+            if(myform.title.value==""){
+                alert('请填写你的新闻标题');
+                myform.title.focus();
+                return false;
+            }
+            if(myform.content.value==""){
+                alert('新闻内容不能为空哦');
+                myform.content.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<form  method="post" action="new_post.php" onsubmit=" return foo();" name="myform">
+    <h1>发布新闻系统</h1>
+    <p>标题：<input type="text" name="title"/></p>
+    <p>内容：<textarea cols=30 rows=5 name="content"></textarea></p>
+    <p><button>发布新闻</button></p>
+</form>
+</body>
+</html>
